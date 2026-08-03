@@ -14,13 +14,13 @@ import TestCall from './pages/TestCall';
 
 function Login() {
   const nav = useNavigate();
-  const [u, setU] = useState('demo');
+  const [u, setU] = useState('Ahsaan');
   const [p, setP] = useState('');
   const [err, setErr] = useState('');
   const [busy, setBusy] = useState(false);
   const go = async () => {
     setBusy(true); setErr('');
-    const r = await api('/api/admin/login', { method: 'POST', body: JSON.stringify({ username: Ahsaan, password: ahsaan king }) });
+    const r = await api('/api/admin/login', { method: 'POST', body: JSON.stringify({ username: u, password: p }) });
     setBusy(false);
     if (!r.ok) return setErr(r.data.error || 'Login failed');
     setToken(r.data.token); nav('/app');
@@ -43,11 +43,11 @@ function Login() {
         <div className="mt-6 rounded-lg border border-gold/30 bg-black/20 p-3 text-center">
           <p className="text-[11px] uppercase tracking-[0.18em] text-gold2">Portfolio demo</p>
           <p className="mt-1 text-xs text-mut">
-            Username <span className="font-mono text-gold2">demo</span>
-            {' · '}Password <span className="font-mono text-gold2">MonalDemo2026</span>
+            Username <span className="font-mono text-gold2">Ahsaan</span>
+            {' · '}Password <span className="font-mono text-gold2">ahsaan king</span>
           </p>
           <button
-            onClick={() => { setU('demo'); setP('MonalDemo2026'); }}
+            onClick={() => { setU('Ahsaan'); setP('ahsaan king'); }}
             className="mt-2 text-xs font-semibold text-gold2 underline underline-offset-2 hover:opacity-80">
             Fill demo credentials
           </button>

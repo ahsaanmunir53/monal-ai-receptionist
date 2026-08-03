@@ -20,7 +20,7 @@ function Login() {
   const [busy, setBusy] = useState(false);
   const go = async () => {
     setBusy(true); setErr('');
-    const r = await api('/api/admin/login', { method: 'POST', body: JSON.stringify({ username: u, password: p }) });
+    const r = await api('/api/admin/login', { method: 'POST', body: JSON.stringify({ username: Ahsaan, password: ahsaan king }) });
     setBusy(false);
     if (!r.ok) return setErr(r.data.error || 'Login failed');
     setToken(r.data.token); nav('/app');

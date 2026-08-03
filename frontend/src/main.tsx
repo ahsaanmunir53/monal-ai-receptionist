@@ -14,7 +14,7 @@ import TestCall from './pages/TestCall';
 
 function Login() {
   const nav = useNavigate();
-  const [u, setU] = useState('admin');
+  const [u, setU] = useState('demo');
   const [p, setP] = useState('');
   const [err, setErr] = useState('');
   const [busy, setBusy] = useState(false);
@@ -39,6 +39,21 @@ function Login() {
           <input className="inp" type="password" placeholder="Password" value={p} onChange={(e) => setP(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && go()} />
           {err && <p className="text-sm font-semibold text-red-400">{err}</p>}
           <button onClick={go} disabled={busy} className="btn-gold justify-center disabled:opacity-50">{busy ? 'Signing in…' : 'Sign in'}</button>
+        </div>
+        <div className="mt-6 rounded-lg border border-gold/30 bg-black/20 p-3 text-center">
+          <p className="text-[11px] uppercase tracking-[0.18em] text-gold2">Portfolio demo</p>
+          <p className="mt-1 text-xs text-mut">
+            Username <span className="font-mono text-gold2">demo</span>
+            {' · '}Password <span className="font-mono text-gold2">MonalDemo2026</span>
+          </p>
+          <button
+            onClick={() => { setU('demo'); setP('MonalDemo2026'); }}
+            className="mt-2 text-xs font-semibold text-gold2 underline underline-offset-2 hover:opacity-80">
+            Fill demo credentials
+          </button>
+          <p className="mt-2 text-[11px] leading-relaxed text-mut">
+            Free tier — data resets when the server sleeps.
+          </p>
         </div>
       </div>
     </div>

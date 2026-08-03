@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body { @apply bg-bg text-ink font-sans; }
+.card { @apply rounded-2xl border border-gold/15 bg-gradient-to-b from-card to-[#0f221b]; }
+.inp { @apply w-full rounded-xl border border-gold/20 bg-[#0e1c17] px-4 py-2.5 text-sm text-ink outline-none focus:border-gold; }
+.btn { @apply inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-bold transition; }
+.btn-gold { @apply btn bg-gradient-to-br from-gold to-[#b8892f] text-[#141005] hover:-translate-y-0.5; }
+.btn-ghost { @apply btn border border-gold/25 text-ink hover:border-gold hover:text-gold2; }
+.th { @apply px-3 py-2 text-left text-[10.5px] font-bold uppercase tracking-widest text-mut border-b border-gold/10; }
+.td { @apply px-3 py-2.5 text-sm border-b border-white/5; }
+.pill { @apply rounded-full px-2.5 py-0.5 text-[10.5px] font-bold; }
+@keyframes flashRow { 0% { background: rgba(212,169,75,.28); } 100% { background: transparent; } }
+.flash-row { animation: flashRow 4s ease-out; }

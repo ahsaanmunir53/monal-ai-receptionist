@@ -1,0 +1,30 @@
+MONAL AI RECEPTIONIST — VIDEO DEMO WORKFLOW (localhost)
+
+RUN:
+  1) cd frontend && npm install && npm run build
+  2) cd ../backend && npm install && node server.js
+  Open http://localhost:5100  ->  login: admin / Monal@2026
+
+MAKE THE VIDEO:
+  3) Dashboard -> "Ring a phone" -> Step 1 -> pick "Urdu — female (Uzma)"
+     -> press "⚡ Configure assistant now".
+     It installs the full Monal brain + Urdu/English mixture mode into Vapi
+     and shows your AI line number. (Re-run any time the menu changes.)
+  4) EITHER call the shown AI line from any phone,
+     OR (recommended, free) Step 2: type YOUR mobile with +92 -> "Call this
+     number now" -> your phone rings, the AI greets you in Urdu.
+  5) Talk naturally — mix Urdu & English in the same sentences. Book a table,
+     ask menu/timings/parking, book a birthday with décor.
+  6) Hang up. Within ~10 seconds the reservation pops onto the Reservations
+     page (new row glows gold) with name, guests, day, time, notes and the
+     caller's number. Click the row -> full details + the call transcript.
+     Overview page shows it in "Latest bookings" too. That's your video.
+
+WHATSAPP (optional): paste the FULL access token from Meta "Step 1. Try it out"
+into WHATSAPP_TOKEN in backend/.env (phone id already set). Add the guest's
+number to Meta's test recipient list or messages won't deliver. Token expires
+every 24h on the test tier — regenerate before recording.
+
+GOOGLE SHEET (optional): create a sheet, Share (Editor) with
+monal-552@monal-502216.iam.gserviceaccount.com, paste its ID into
+GOOGLE_SHEET_ID, restart.

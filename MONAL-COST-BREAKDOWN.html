@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Monal — AI Receptionist · Cost Breakdown</title>
+<style>
+:root{--bg:#0b1512;--card:#122820;--gold:#d4a94b;--gold2:#e8c87a;--em2:#2a9d75;--ink:#eef5f1;--mut:#9db8ac;--line:rgba(212,169,75,.18)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding:40px 18px}
+.wrap{max-width:900px;margin:0 auto}
+h1{font-family:Georgia,serif;font-size:clamp(26px,4vw,38px);color:var(--gold2)}
+h2{font-family:Georgia,serif;font-size:21px;color:var(--gold2);margin:38px 0 10px}
+p.sub{color:var(--mut);margin-top:8px}
+.card{background:linear-gradient(180deg,var(--card),#0f221b);border:1px solid var(--line);border-radius:18px;padding:22px;margin-top:16px}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
+th{font-size:10.5px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+td{padding:10px;border-bottom:1px solid rgba(255,255,255,.06);vertical-align:top}
+tr:last-child td{border-bottom:0}
+.r{text-align:right;white-space:nowrap}
+a{color:var(--em2);text-decoration:none}
+a:hover{text-decoration:underline}
+.tot td{font-weight:800;color:var(--gold2);border-top:2px solid var(--line);font-size:15px}
+.note{font-size:12.5px;color:var(--mut);margin-top:10px}
+.badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;padding:5px 12px;border-radius:999px;border:1px solid var(--line);color:var(--gold2);margin-top:14px}
+.free{color:var(--em2);font-weight:700}
+.grid2{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+@media(max-width:720px){.grid2{grid-template-columns:1fr}}
+.big{font-family:Georgia,serif;font-size:30px;color:var(--gold2)}
+footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);color:var(--mut);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🦚 The Monal — AI Receptionist</h1>
+  <p class="sub">Complete, verifiable cost breakdown — every component, with the official pricing page so your team can check each number directly.</p>
+  <span class="badge">Prepared by GenModelX · Volume basis: 300+ calls/week ≈ 1,300 calls/month ≈ 3,000 call-minutes</span>
+
+  <h2>1 · What the system is made of</h2>
+  <div class="card">
+    <table>
+      <thead><tr><th>Component</th><th>What it does</th><th>Provider</th><th class="r">Unit price*</th><th>Verify</th></tr></thead>
+      <tbody>
+        <tr><td><b>Call platform</b></td><td>Runs the live call, connects ears + brain + voice</td><td>Vapi</td><td class="r">$0.05 / min</td><td><a href="https://vapi.ai/pricing" target="_blank">vapi.ai/pricing</a></td></tr>
+        <tr><td><b>Ears</b> (speech-to-text)</td><td>Understands Urdu + English, mixed in one sentence</td><td>OpenAI (Whisper family)</td><td class="r">≈ $0.006 / min</td><td><a href="https://openai.com/api/pricing" target="_blank">openai.com/api/pricing</a></td></tr>
+        <tr><td><b>Brain</b> (language model)</td><td>Conversation, bookings, menu answers, escalation</td><td>OpenAI GPT-4o-mini</td><td class="r">≈ $0.01–0.02 / min</td><td><a href="https://openai.com/api/pricing" target="_blank">openai.com/api/pricing</a></td></tr>
+        <tr><td><b>Voice</b> (text-to-speech)</td><td>Natural Pakistani Urdu voice (Uzma / Asad)</td><td>Microsoft Azure</td><td class="r">≈ $0.01–0.02 / min</td><td><a href="https://azure.microsoft.com/en-us/pricing/details/cognitive-services/speech-services/" target="_blank">azure.com/speech pricing</a></td></tr>
+        <tr><td><b>Phone number</b></td><td>The line customers call / receive calls from</td><td>Vapi (incl.) or Twilio import</td><td class="r">$0–2 / month + telephony ≈ $0.01/min</td><td><a href="https://www.twilio.com/en-us/voice/pricing" target="_blank">twilio.com pricing</a></td></tr>
+        <tr><td><b>WhatsApp confirmations</b></td><td>Instant booking confirmation to every guest</td><td>Meta WhatsApp Cloud API</td><td class="r">≈ Rs 4–15 / conversation (1st 1,000 service conv./mo <span class="free">free</span>)</td><td><a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank">Meta pricing</a></td></tr>
+        <tr><td><b>Booking sheet</b></td><td>Every reservation auto-written to Google Sheets</td><td>Google</td><td class="r"><span class="free">Free</span></td><td><a href="https://developers.google.com/sheets/api" target="_blank">Sheets API</a></td></tr>
+        <tr><td><b>Dashboard hosting</b></td><td>Manager dashboard + database, always on</td><td>Render (Starter + disk)</td><td class="r">$7.25 / month</td><td><a href="https://render.com/pricing" target="_blank">render.com/pricing</a></td></tr>
+        <tr><td><b>Domain</b></td><td>e.g. reception.monal.pk / monal-ai.com</td><td>Namecheap etc.</td><td class="r">≈ $12 / year (≈ Rs 300/mo)</td><td><a href="https://www.namecheap.com" target="_blank">namecheap.com</a></td></tr>
+      </tbody>
+    </table>
+    <p class="note">* Public list prices as of July 2026 at ≈ Rs 280 / USD — every link opens the provider's official pricing page so your team can verify today's exact rate.</p>
+  </div>
+
+  <h2>2 · Monthly running cost at your call volume</h2>
+  <div class="card">
+    <table>
+      <thead><tr><th>Item</th><th class="r">1,500 min / mo<br><span style="font-weight:400;color:var(--mut)">(~650 calls)</span></th><th class="r"><b>3,000 min / mo</b><br><span style="font-weight:400;color:var(--mut)">(your volume ≈ 1,300 calls)</span></th><th class="r">5,000 min / mo<br><span style="font-weight:400;color:var(--mut)">(peak season)</span></th></tr></thead>
+      <tbody>
+        <tr><td>Call platform (Vapi, $0.05/min)</td><td class="r">Rs 21,000</td><td class="r">Rs 42,000</td><td class="r">Rs 70,000</td></tr>
+        <tr><td>Ears — speech-to-text (~$0.006/min)</td><td class="r">Rs 2,500</td><td class="r">Rs 5,000</td><td class="r">Rs 8,400</td></tr>
+        <tr><td>Brain — GPT-4o-mini (~$0.015/min)</td><td class="r">Rs 6,300</td><td class="r">Rs 12,600</td><td class="r">Rs 21,000</td></tr>
+        <tr><td>Voice — Azure Urdu (~$0.015/min)</td><td class="r">Rs 6,300</td><td class="r">Rs 12,600</td><td class="r">Rs 21,000</td></tr>
+        <tr><td>Telephony (~$0.01/min) + number</td><td class="r">Rs 4,800</td><td class="r">Rs 9,000</td><td class="r">Rs 14,600</td></tr>
+        <tr><td>WhatsApp confirmations (after free tier)</td><td class="r">Rs 2,000</td><td class="r">Rs 5,000</td><td class="r">Rs 9,000</td></tr>
+        <tr><td>Hosting (dashboard + database)</td><td class="r">Rs 2,100</td><td class="r">Rs 2,100</td><td class="r">Rs 2,100</td></tr>
+        <tr><td>Domain (amortised)</td><td class="r">Rs 300</td><td class="r">Rs 300</td><td class="r">Rs 300</td></tr>
+        <tr><td>Google Sheets</td><td class="r"><span class="free">Free</span></td><td class="r"><span class="free">Free</span></td><td class="r"><span class="free">Free</span></td></tr>
+        <tr class="tot"><td>Infrastructure total / month</td><td class="r">≈ Rs 45,000</td><td class="r">≈ Rs 89,000</td><td class="r">≈ Rs 146,000</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Optional premium: ElevenLabs ultra-natural voice instead of Azure adds ≈ $0.06/min → ≈ +Rs 50,000/month at 3,000 min (<a href="https://elevenlabs.io/pricing" target="_blank">elevenlabs.io/pricing</a>).</p>
+  </div>
+
+  <h2>3 · One-time setup (what it covers)</h2>
+  <div class="card">
+    <table>
+      <tbody>
+        <tr><td>Custom training on The Monal — full menu, prices, timings, packages, policies, escalation rules (Urdu + English)</td></tr>
+        <tr><td>Voice selection &amp; tuning, call-flow testing (20+ scripted test calls incl. mixed-language, large groups, birthdays, complaints)</td></tr>
+        <tr><td>Manager dashboard deployment, phone-number connection, WhatsApp &amp; Google Sheet integration, staff walkthrough</td></tr>
+        <tr><td>Domain, SSL, and production hardening</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>4 · Commercial summary</h2>
+  <div class="grid2">
+    <div class="card">
+      <p style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)">Single branch</p>
+      <p class="big">Rs 150,000 / month</p>
+      <p class="note">Includes 3,000 call-minutes, all infrastructure above, monitoring, monthly tuning &amp; report, support. Overage Rs 70/min. One-time setup Rs 350,000.</p>
+    </div>
+    <div class="card">
+      <p style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)">Monal Group — multi-branch</p>
+      <p class="big">Rs 120,000 / branch / month</p>
+      <p class="note">Pooled minutes, per-branch menus &amp; timings, central group dashboard, priority support. One-time group setup Rs 500,000.</p>
+    </div>
+  </div>
+  <div class="card">
+    <p><b>Why the monthly fee is more than the raw infrastructure line:</b> the fee includes the infrastructure <i>plus</i> what keeps it excellent — 24/7 monitoring, prompt &amp; menu updates within minutes of your changes, monthly performance reports (calls, bookings, missed-call recovery), WhatsApp template management, provider price fluctuations absorbed by us, and an engineer on call. You never receive a surprise API bill — one fixed number, everything handled.</p>
+    <p class="note" style="margin-top:12px"><b>Pilot option:</b> Rs 150,000 for one full month on one line, all features, ending with a written report of every call and booking — fully credited toward setup if you continue.</p>
+  </div>
+
+  <footer>
+    <span><b style="color:var(--gold2)">GenModelX</b> · AI receptionists for Pakistan's finest restaurants</span>
+    <span>Prepared exclusively for The Monal · July 2026</span>
+  </footer>
+</div>
+</body>
+</html>
